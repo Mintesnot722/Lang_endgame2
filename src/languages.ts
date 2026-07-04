@@ -1,6 +1,6 @@
 import { nanoid } from "nanoid";
 
-type Language = {
+export type Language = {
   id: string;
   lang: string;
   color: string;
