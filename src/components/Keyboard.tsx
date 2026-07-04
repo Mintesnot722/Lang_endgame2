@@ -15,12 +15,12 @@ const Keyboard = ({
 }: KeyboardProps): JSX.Element => {
   const alphabet = "abcdefghijklmnopqrstuvwxyz";
 
-  const alphabetElement = alphabet.split("").map((letter) => {
-    const isGuessed = guessedLetters.includes(letter);
-    const isCorrect = isGuessed && currentWord.includes(letter);
-    const isWrong = isGuessed && !currentWord.includes(letter);
+  const alphabetElement:JSX.Element[] = alphabet.split("").map((letter:string):JSX.Element => {
+    const isGuessed:boolean = guessedLetters.includes(letter);
+    const isCorrect:boolean = isGuessed && currentWord.includes(letter);
+    const isWrong:boolean = isGuessed && !currentWord.includes(letter);
 
-    const className = clsx(
+    const className:string = clsx(
       "w-10 h-10 border border-gray-400 rounded font-medium",
       {
         "bg-[#10A95B]": isCorrect,
